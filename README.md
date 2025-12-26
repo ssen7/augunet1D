@@ -38,6 +38,15 @@ We use github repo provided by DETRtime[^1] authors and modify it for our datase
     - [Traditional_ML_Models.ipynb](./comparison_code/Traditional_ML_Models.ipynb) for training KNN, Logistic Regression, Decision Tree and Random Forest Models.
     - [Traditional_ML_per_mouse_prediction.ipynb](./comparison_code/Traditional_ML_per_mouse_prediction.ipynb) for inference on each test mice.
 
+# STREAMLIT APP
+
+We also provide an interactive webapp to use our trained models.
+
+To run:
+- Run ```cd augunet1D/streamlit_app``` in the terminal.
+- With the conda environment activated, run ```streamlit run app.py```.
+
+
 ***
 
 ## References
