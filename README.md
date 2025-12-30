@@ -13,7 +13,8 @@ Fully reproducible code for AugUnet1D and methods we compared it against.
     - all training code uses PyTorch Lightning based code.
 - augunet1D/inference contains code for inference.
     - use the [evaluation_all_mice.ipynb](./augunet1D/inference/evaluation_all_mice.ipynb) for doing inference.
-    - checkpoints for the models trained will be provided.
+    - Model checkpoint available in folder in [Google Drive](https://drive.google.com/drive/folders/1i3NTwTuxoBsRoQodCZI6-4VYoH4uGafP?usp=drive_link)
+    - Data available in .MAT format (used for training) in Zenodo: https://doi.org/10.5281/zenodo.17982390
 
 We adapted code from the following repositories for this project:
 - PyTorch 1D UNet model definitions from [https://github.com/fepegar/unet/blob/main/unet/unet.py](https://github.com/fepegar/unet/blob/main/unet/unet.py).
@@ -24,7 +25,9 @@ We adapted code from the following repositories for this project:
 We would also like to thank this blog post from [Sebastian Raschka](https://sebastianraschka.com/) for guiding us with PyTorch Lightning https://sebastianraschka.com/blog/2023/pytorch-faster.html.
 
 # COMPARISON CODE
-We use github repo provided by DETRtime[^1] authors and modify it for our dataset. Please reference this repository for the original code: [DETRtime](https://github.com/lu-wo/DETRtime)
+We use github repo provided by DETRtime[^1] authors and modify it for our dataset. Please reference this repository for the original code: [DETRtime](https://github.com/lu-wo/DETRtime).
+
+The repo required our training data to be converted from MAT format to .npz, which is available in the [Google Drive](https://drive.google.com/drive/folders/1i3NTwTuxoBsRoQodCZI6-4VYoH4uGafP?usp=drive_link) link.
 
 - comparison_code/BASELINES contains code adapted from [DETRtime/Baselines](https://github.com/lu-wo/DETRtime/tree/main/Baselines) for the baselines mentioned in our paper.
     - Please modify ```config["data_dir"]``` in [config.py](./comparison_code/Baselines/config.py) to point to the directory containing the training files. The training files used will be provided.
