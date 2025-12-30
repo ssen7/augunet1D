@@ -13,7 +13,7 @@ Fully reproducible code for AugUnet1D and methods we compared it against.
     - all training code uses PyTorch Lightning based code.
 - augunet1D/inference contains code for inference.
     - use the [evaluation_all_mice.ipynb](./augunet1D/inference/evaluation_all_mice.ipynb) for doing inference.
-    - Model checkpoint available in folder in [Google Drive](https://drive.google.com/drive/folders/1i3NTwTuxoBsRoQodCZI6-4VYoH4uGafP?usp=drive_link)
+    - Model checkpoint available in folder in [Google Drive](https://drive.google.com/drive/folders/1i3NTwTuxoBsRoQodCZI6-4VYoH4uGafP?usp=drive_link).
     - Data available in .MAT format (used for training) in Zenodo: https://doi.org/10.5281/zenodo.17982390
 
 We adapted code from the following repositories for this project:
