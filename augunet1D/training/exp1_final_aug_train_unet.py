@@ -140,10 +140,25 @@ if __name__=='__main__':
     print(watermark(packages="torch,pytorch_lightning,transformers", python=True), flush=True)
     print("Torch CUDA available?", torch.cuda.is_available(), flush=True)
 
-    # Load Data
-    # df_path='/project/GutIntelligenceLab/ss4yd/mice_data/processed_data/processed_data.csv'
-    # df_path='/scratch/ss4yd/SWDUNet/final_train_test_split.csv'
-    df_path='/home/ss4yd/time_segmentation/SWDUNet/final_train_test_split.csv'
+    # Specify train and test data paths
+    train_path=''
+    test_path=''
+    
+    
+    ## Create final train-test split csv
+    train_df=pd.DataFrame()
+    test_df=pd.DataFrame()
+    train_df['files']=[os.path.join(train_path,x) for x in os.listdir(train_path)]
+    train_df['mid']=train_df['files'].apply(lambda x: x.split('/')[-1].split('.')[0])
+    train_df['dtype']='train'
+    test_df['files']=[os.path.join(test_path,x) for x in os.listdir(test_path)]
+    test_df['mid']=test_df['files'].apply(lambda x: x.split('/')[-1].split('.')[0])
+    test_df['dtype']='test'
+    final_df=pd.concat([train_df,test_df],axis=0).reset_index(drop=True)
+    final_df.to_csv('./final_train_test_split.csv',index=False)
+    
+    
+    df_path='./final_train_test_split.csv'
     orig_freq=1000
     down_freq=100
     split_size=2000

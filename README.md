@@ -11,6 +11,8 @@ Fully reproducible code for AugUnet1D and methods we compared it against.
 # AUGUNET1D
 - augunet1D/training contains code for training
     - all training code uses PyTorch Lightning based code.
+    - use [exp1_final_aug_train_unet.py](./augunet1D/training/exp1_final_aug_train_unet.py) to train your own model.
+    - replace ```train_path``` and ```test_path``` in the script to point to your directories containing the training and testing data.
 - augunet1D/inference contains code for inference.
     - use the [evaluation_all_mice.ipynb](./augunet1D/inference/evaluation_all_mice.ipynb) for doing inference.
     - Model checkpoint available in folder in [Google Drive](https://drive.google.com/drive/folders/1i3NTwTuxoBsRoQodCZI6-4VYoH4uGafP?usp=drive_link).
